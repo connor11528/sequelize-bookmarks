@@ -1,0 +1,17 @@
+{
+  "name": "sequelize-bookmarks",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Connor Leech <connorleech@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

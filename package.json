@@ -1,0 +1,18 @@
+{
+  "name": "sequelize-bookmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/jshint/bin/jshint hello.js",
+    "start": "node index.js",
+    "postinstall": "bower cache clean && bower install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.11.1",
+    "mysql2": "^1.0.0-rc.11",
+    "sequelize": "^3.24.1"
+  }
+}
