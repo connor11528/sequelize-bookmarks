@@ -2,6 +2,19 @@
 
 A Javascript (Node.js) application with a MySQL database.
 
+### Sequelize notes
+
+Define a model and migration in one command with [Sequelize CLI](https://github.com/sequelize/cli):
+
+```
+$ sequelize model:create --name=Author --attributes name:string,bio:text --underscored
+```
+
+Run migrations (creates tables): 
+
+```
+$ sequelize db:migrate
+```
 
 ### MySQL helper commands
 Log in to MySQL with password:
