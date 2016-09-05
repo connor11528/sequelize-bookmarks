@@ -2,6 +2,8 @@
 
 A Javascript (Node.js) application with a MySQL database.
 
+![](http://docs.sequelizejs.com/en/v3/images/logo-small.png)
+
 ### Sequelize notes
 
 Define a model and migration in one command with [Sequelize CLI](https://github.com/sequelize/cli):
