@@ -3,6 +3,9 @@ var app = require('express')(),
 	authors = require('./server/controllers/authors'),
 	books = require('./server/controllers/books');
 
+// express config
+app.set('port', process.env.PORT || 8000);
+
 // authors routes
 app.get('/authors', authors.index);
 app.get('/authors/:id', authors.show);
@@ -16,7 +19,6 @@ app.get('/books/:id', books.show);
 app.post('/books', books.create);
 app.delete('/books', books.delete);
 
-app.set('port', process.env.PORT || 8000);
 
 app.listen(app.get('port'), function () {
   console.log("Server started on port", app.get('port'));
