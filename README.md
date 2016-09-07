@@ -4,6 +4,10 @@ A Javascript (Node.js) application with a MySQL database.
 
 ![](http://docs.sequelizejs.com/en/v3/images/logo-small.png)
 
+### Getting started
+
+Workflow is run `webpack` to build out client side and `node index` or `npm start` to fire up the server. The app will run on **localhost:8000**
+
 ### Sequelize notes
 
 Define a model and migration in one command with [Sequelize CLI](https://github.com/sequelize/cli):

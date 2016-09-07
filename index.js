@@ -1,9 +1,18 @@
 
-var app = require('express')(),
+var express = require('express'),
+	app = express(),
+	bodyParser = require('body-parser'),
+	cookieParser = require('cookie-parser'),
+	methodOverride = require('method-override'),
 	authors = require('./server/controllers/authors'),
 	books = require('./server/controllers/books');
 
 // express config
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride());
+app.use(cookieParser());
+app.use(express.static(__dirname + '/public'));
 app.set('port', process.env.PORT || 8000);
 
 // authors routes

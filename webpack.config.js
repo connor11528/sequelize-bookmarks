@@ -1,9 +1,9 @@
 module.exports = {
   // the main entry of our app
-  entry: ['./src/index.js', './src/auth/index.js'],
+  entry: ['./public/index.js'],
   // output configuration
   output: {
-    path: __dirname + '/build/',
+    path: __dirname + '/public/build/',
     publicPath: 'build/',
     filename: 'build.js'
   },
