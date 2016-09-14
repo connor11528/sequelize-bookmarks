@@ -4,18 +4,47 @@ A Javascript (Node.js) application with a MySQL database.
 
 ![](http://docs.sequelizejs.com/en/v3/images/logo-small.png)
 
+### Models
+
+**Author**
+
+- name:string
+
+- bio:text
+
+*Has Many Books*
+
+**Book**
+
+- name:string
+
+- isbn:integer
+
+- publication_date:date
+
+- description:text
+
+- author_id:integer
+
 ### API Endpoints
 
-**GET /authors**
-**GET /authors/:id**
-**POST /authors**
-**PUT /authors**
-**DELETE /authors**
+**GET /authors** - get all the authors and all the books associated with all the authors
 
-**GET /books**
-**GET /books/:id**
-**POST /books**
-**DELETE /books**
+**GET /authors/:id** - get an author by id and also get all the books associated with that author
+
+**POST /authors** - create a new author (name:string, bio:text)
+
+**PUT /authors** - update a new author (name:string, bio:text)
+
+**DELETE /authors** - delete author by passing given id field. Also deletes all books associated with that author
+
+**GET /books** - get all the books
+
+**GET /books/:id** - get a single book by passing id to params
+
+**POST /books** - create a new book (name:string, isbn:integer, publication_date:date, description:text, author_id:integer)
+
+**DELETE /books** - delete a book by passing id to params
 
 ### Getting started
 
