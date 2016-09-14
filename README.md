@@ -4,9 +4,11 @@ A Javascript (Node.js) application with a MySQL database.
 
 ![](http://docs.sequelizejs.com/en/v3/images/logo-small.png)
 
-### Models
+## Models
 
-**Author**
+There are two database models, **Author** and **Book**. Each is represented by a MySQL table.
+
+### Author
 
 - name:string
 
@@ -14,7 +16,7 @@ A Javascript (Node.js) application with a MySQL database.
 
 *Has Many Books*
 
-**Book**
+### Book
 
 - name:string
 
@@ -26,7 +28,9 @@ A Javascript (Node.js) application with a MySQL database.
 
 - author_id:integer
 
-### API Endpoints
+## API Endpoints
+
+All responses will be in JSON format.
 
 **GET /authors** - get all the authors and all the books associated with all the authors
 
@@ -46,11 +50,17 @@ A Javascript (Node.js) application with a MySQL database.
 
 **DELETE /books** - delete a book by passing id to params
 
-### Getting started
+## Getting started
+
+First clone the repo and change directories into it.
 
 Workflow is run `webpack` to build out client side and `node index` or `npm start` to fire up the server. The app will run on **localhost:8000**
 
-### Sequelize notes
+The webpack command will compile the javascripts and Vue templates into bundle.js that is in turn called by index.html. The next command will start the server and server index.html to the browser.
+
+## Sequelize Notes
+
+Below are some helper commands to get started and work around Sequelize and SQL databases with Javascript.
 
 Define a model and migration in one command with [Sequelize CLI](https://github.com/sequelize/cli):
 
