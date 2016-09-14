@@ -3,6 +3,8 @@
 A Javascript (Node.js) application with a MySQL database.
 
 ![](http://docs.sequelizejs.com/en/v3/images/logo-small.png)
+![](https://pbs.twimg.com/profile_images/713496146790977536/tZowsPX9.jpg)
+![](https://avatars0.githubusercontent.com/webpack?&s=256)
 
 ## Models
 
