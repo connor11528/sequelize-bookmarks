@@ -1,6 +1,6 @@
 # Sequelize bookmarks application
 
-A Javascript (Node.js) application with a MySQL database.
+A Javascript (Node.js) application with a MySQL database and Vue.js client application, bundled courtesy of npm and Webpack.
 
 ![](http://docs.sequelizejs.com/en/v3/images/logo-small.png)
 ![](https://pbs.twimg.com/profile_images/713496146790977536/tZowsPX9.jpg)
