@@ -40,3 +40,6 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+
+// P.S. no idea where this file gets called but it does run we start the server.

@@ -28,6 +28,9 @@ app.get('/books/:id', books.show);
 app.post('/books', books.create);
 app.delete('/books', books.delete);
 
+// seed the database
+require('./server/seeders')
+
 
 app.listen(app.get('port'), function () {
   console.log("Server started on port", app.get('port'));

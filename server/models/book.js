@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Book = sequelize.define('Book', {
-    name: DataTypes.STRING,
+    title: DataTypes.STRING,
     isbn: DataTypes.INTEGER,
     publication_date: DataTypes.DATE,
     description: DataTypes.TEXT,
@@ -11,6 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        Book.belongsTo(models.Author, {});
       }
     }
   });

@@ -50,7 +50,7 @@ A Javascript (Node.js) application with a MySQL database.
 
 Workflow is run `webpack` to build out client side and `node index` or `npm start` to fire up the server. The app will run on **localhost:8000**
 
-### Sequelize notes
+### Sequelize CLI
 
 Define a model and migration in one command with [Sequelize CLI](https://github.com/sequelize/cli):
 
@@ -65,6 +65,7 @@ $ sequelize db:migrate
 ```
 
 ### MySQL helper commands
+
 Log in to MySQL with password:
 
 ```
