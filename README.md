@@ -34,6 +34,12 @@ There are two database models, **Author** and **Book**. Each is represented by a
 
 All responses will be in JSON format.
 
+The base url format for all endpoints is:
+
+```
+http://localhost:8000/api
+```
+
 | Method      | URL         | Description  |
 | ------------- |-------------| -----|
 | GET     | **/authors** | get all the authors and all the books associated with all the authors |
@@ -70,7 +76,9 @@ Run migrations (creates tables):
 $ sequelize db:migrate
 ```
 
-### MySQL helper commands
+For seeding the initial database with Authors and Books, we use [sequelize-fixtures](https://github.com/domasx2/sequelize-fixtures).
+
+## MySQL helper commands
 
 Log in to MySQL with password:
 
