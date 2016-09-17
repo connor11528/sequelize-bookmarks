@@ -1,12 +1,16 @@
 # Sequelize bookmarks application
 
-A Javascript (Node.js) application with a MySQL database.
+A Javascript (Node.js) application with a MySQL database and Vue.js client application, bundled courtesy of npm and Webpack.
 
 ![](http://docs.sequelizejs.com/en/v3/images/logo-small.png)
+![](https://pbs.twimg.com/profile_images/713496146790977536/tZowsPX9.jpg)
+![](https://avatars0.githubusercontent.com/webpack?&s=256)
 
-### Models
+## Models
 
-**Author**
+There are two database models, **Author** and **Book**. Each is represented by a MySQL table.
+
+### Author
 
 - name:string
 
@@ -14,7 +18,7 @@ A Javascript (Node.js) application with a MySQL database.
 
 *Has Many Books*
 
-**Book**
+### Book
 
 - name:string
 
@@ -26,31 +30,33 @@ A Javascript (Node.js) application with a MySQL database.
 
 - author_id:integer
 
-### API Endpoints
+## API Endpoints
 
-**GET /authors** - get all the authors and all the books associated with all the authors
+All responses will be in JSON format.
 
-**GET /authors/:id** - get an author by id and also get all the books associated with that author
+| Method      | URL         | Description  |
+| ------------- |-------------| -----|
+| GET     | **/authors** | get all the authors and all the books associated with all the authors |
+| GET | **/authors/:id** | get an author by id and also get all the books associated with that author |
+| POST | **/authors** | create a new author (name:string, bio:text) |
+| PUT | **/authors** | update a new author (name:string, bio:text) |
+| DELETE | **/authors** | delete author by passing given id field. Also deletes all books associated with that author |
+| GET | **/books** | get all the books |
+| GET | **/books/:id** | get a single book by passing id to params |
+| POST | **/books** | create a new book (name:string, isbn:integer, publication_date:date, description:text, author_id:integer)|
+| DELETE | **/books** | delete a book by passing id to params |
 
-**POST /authors** - create a new author (name:string, bio:text)
+## Getting started
 
-**PUT /authors** - update a new author (name:string, bio:text)
-
-**DELETE /authors** - delete author by passing given id field. Also deletes all books associated with that author
-
-**GET /books** - get all the books
-
-**GET /books/:id** - get a single book by passing id to params
-
-**POST /books** - create a new book (name:string, isbn:integer, publication_date:date, description:text, author_id:integer)
-
-**DELETE /books** - delete a book by passing id to params
-
-### Getting started
+First clone the repo and change directories into it.
 
 Workflow is run `webpack` to build out client side and `node index` or `npm start` to fire up the server. The app will run on **localhost:8000**
 
-### Sequelize CLI
+The webpack command will compile the javascripts and Vue templates into bundle.js that is in turn called by index.html. The next command will start the server and server index.html to the browser.
+
+## Sequelize Notes
+
+Below are some helper commands to get started and work around Sequelize and SQL databases with Javascript.
 
 Define a model and migration in one command with [Sequelize CLI](https://github.com/sequelize/cli):
 
