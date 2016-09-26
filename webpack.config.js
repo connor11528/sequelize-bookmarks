@@ -1,13 +1,27 @@
+
+var path = require('path');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   // the main entry of our app
-  entry: ['./public/index.js'],
+  entry: [
+    './public/index.js'
+  ],
   // output configuration
   output: {
     path: __dirname + '/public/build/',
     publicPath: 'build/',
     filename: 'build.js'
   },
-
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: 'public/index.tpl.html',
+  //     inject: 'body',
+  //     filename: 'index.html'
+  //   }),
+  //   new webpack.HotModuleReplacementPlugin(),
+  // ],
   module: {
     loaders: [
       // process *.vue files using vue-loader

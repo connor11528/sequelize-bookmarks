@@ -2,8 +2,6 @@
 const sequelize_fixtures = require('sequelize-fixtures');
 
 var path = require('path');
-console.log(require('path').basename(__dirname))
-
 var models = require('../models/');
 
 sequelize_fixtures.loadFiles([

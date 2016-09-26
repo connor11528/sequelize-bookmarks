@@ -4,6 +4,7 @@ import VueResource from 'vue-resource'
 
 import MainTemplate from './components/MainTemplate.vue'
 import Home from './components/Home.vue'
+import Authors from './components/Authors.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -15,6 +16,9 @@ export var router = new VueRouter()
 router.map({
 	'/': {
 		component: Home
+	},
+	'/authors': {
+		component: Authors
 	}
 })
 

@@ -6,6 +6,11 @@ A Javascript (Node.js) application with a MySQL database and Vue.js client appli
 ![](https://pbs.twimg.com/profile_images/713496146790977536/tZowsPX9.jpg)
 ![](https://avatars0.githubusercontent.com/webpack?&s=256)
 
+## Vue tools
+
+- Bootstrap type tools: http://yuche.github.io/vue-strap/
+- Multiselect: https://github.com/monterail/vue-multiselect
+
 ## Models
 
 There are two database models, **Author** and **Book**. Each is represented by a MySQL table.
@@ -59,6 +64,8 @@ First clone the repo and change directories into it.
 Workflow is run `webpack` to build out client side and `node index` or `npm start` to fire up the server. The app will run on **localhost:8000**
 
 The webpack command will compile the javascripts and Vue templates into bundle.js that is in turn called by index.html. The next command will start the server and server index.html to the browser.
+
+[christianalfoni/webpack-express-boilerplate](https://github.com/christianalfoni/webpack-express-boilerplate) is a good example of a more advanced and integrated webpack-express build system #todo
 
 ## Sequelize Notes
 
