@@ -6,6 +6,7 @@ import MainTemplate from './components/MainTemplate.vue'
 import Home from './components/Home.vue'
 import Authors from './components/Authors.vue'
 
+
 Vue.use(VueResource)
 Vue.use(VueRouter)
 
