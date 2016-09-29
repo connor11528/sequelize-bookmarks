@@ -5,6 +5,10 @@
 		
 		<spinner v-ref:spinner size="xl" fixed text="Loading Authors"></spinner>
 		<Author-List :list.sync="authors"></Author-List>
+		<Author-List :list.sync="potter"></Author-List>
+		<Author-List :list.sync="books"></Author-List>
+		<Author-List :list.sync="authors"></Author-List>
+		<Author-List :list.sync="authors"></Author-List>
 
 	</div>
 </template>
@@ -22,7 +26,9 @@ export default {
 	},
 	data(){
 		return {
-			authors: [] // [{bio: 'wizard', name: 'Harry Potter', Books: [1,2,3]}]
+			authors: [],
+			potter: [{bio: 'wizard', name: 'Harry Potter', Books: [1,2,3]}],
+			books: [{bio: 'wizard', name: 'Books', Books: [1,2,3]}]
 		}
 	},
 	ready(){
