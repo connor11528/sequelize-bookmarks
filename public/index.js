@@ -39,5 +39,16 @@ router.redirect({
 	'*': '/'
 })
 
+// register a filter
+Vue.filter('authorIdToName', function (id, authors) {
+
+	let author = (authors.length > 0) ? authors.find(a => id === a.id) : ''
+
+	if(author.hasOwnProperty('name'))
+		return author.name
+	else 
+		return ''
+})
+
 // expose the whole thing on element with 'app' as an id
 router.start(MainTemplate, '#app')

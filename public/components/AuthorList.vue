@@ -4,7 +4,7 @@
 <ul>
 	<li v-for='author in list'>
 		<h3>
-			<a v-link="{ path: '/author/' + author.id }">{{author.name}}</a>
+			<a class='author-name' v-link="{ path: '/author/' + author.id }">{{author.name}}</a>
 		</h3>
 		<i>{{author.bio}}</i>
 		<p>{{author.Books.length}} books</p>
@@ -21,5 +21,5 @@ export default {
 </script>
 
 <style> 
-	a { cursor: pointer; text-decoration: none; }
+	.author-name { cursor: pointer; color: black; text-decoration: none; }
 </style>

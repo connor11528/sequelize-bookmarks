@@ -15,7 +15,6 @@
 		</div>
 		<div class='footer'>
 			
-			
 		</div>
 	</div>
 </template>
@@ -24,12 +23,12 @@
 <script>
 
 export default {
+	name: 'main',
 	components: {
 		
 	},
 	data() {
 		return {
-			USstate: ['Alabama', 'Alaska', 'Arizona']
 		}
 	},
 	methods: {
