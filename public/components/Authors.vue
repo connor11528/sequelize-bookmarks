@@ -4,7 +4,7 @@
 		<h1>Authors</h1>
 		
 		<spinner v-ref:spinner size="xl" fixed text="Loading Authors"></spinner>
-		<typeahead :data="authorNames" :template="authorSearchTemplate" :on-hit="goToAuthorPage" placeholder="Search authors">
+		<typeahead :data="authorNames" :on-hit="goToAuthorPage" placeholder="Search authors">
 			</typeahead>
 
 		<Author-List :list.sync="authors"></Author-List>
@@ -27,14 +27,8 @@ export default {
 	data(){
 		return {
 			authors: [],
-			authorNames: [],
-			authorSearchTemplate: `
-				<p>Custom template here</p>
-			`
+			authorNames: []
 		}
-	},
-	computed: {
-		
 	},
 	ready(){
 		this.$refs.spinner.show()
@@ -52,13 +46,11 @@ export default {
             }, function(err){
             	console.error('Error requesting authors: ')
             	console.error(err)
-            }).then(function(){
-            	this.$refs.spinner.hide()
-            })
+            }).then(() => this.$refs.spinner.hide())
 		},
-		goToAuthorPage(){
-			console.log('we going')
-			this.$router.go('/')
+		goToAuthorPage(name){
+			let author = this.authors.find(a => name === a.name)
+			this.$router.go('/author/' + author.id)
 		}
 	}
 }

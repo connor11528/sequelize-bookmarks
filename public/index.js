@@ -5,7 +5,9 @@ import VueResource from 'vue-resource'
 import MainTemplate from './components/MainTemplate.vue'
 import Home from './components/Home.vue'
 import Authors from './components/Authors.vue'
-
+import Author from './components/Author.vue'
+import Books from './components/Books.vue'
+import Book from './components/Book.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -20,6 +22,15 @@ router.map({
 	},
 	'/authors': {
 		component: Authors
+	},
+	'/author/:id': {
+		component: Author
+	},
+	'/books': {
+		component: Books
+	},
+	'/book/:id': {
+		component: Book
 	}
 })
 
